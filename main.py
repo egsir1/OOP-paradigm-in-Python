@@ -21,6 +21,11 @@ class Hotel:
             return True
         else:
             return False
+        
+
+    @classmethod   
+    def get_hotel_count(cls, data):
+        return len(data)
 
 
 class ReservationTicket:
@@ -36,6 +41,14 @@ class ReservationTicket:
         Hotel Name: {self.hotel.name}
         """
         return content
+    
+    @property
+    def the_customer_name(self):
+        return self.customer_name.strip().title()
+    
+    @staticmethod
+    def convert(amount):
+        return amount * 0.84
 
 
 class CreditCard:
